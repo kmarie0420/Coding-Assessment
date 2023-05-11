@@ -11,52 +11,57 @@
 
   <div class="outer">
 
-    <div class="top">
-        <button>View Highscores</button>
-        <p>Timer: 00:00</p>
+    <div class="top" id="top">
+        <button id="Highscores" class="button">View Highscores</button>
+        <p id="timer">Timer: 90</p>
     </div>
 
-    <div class="inner">
+    <div class="inner" id="inner">
         <header class="Welcome">
             <h1>Welcome to the "Coding-Assessment!"</h1>
             <h2> To get started with the Assessment, click start!</h2>
-            <button>Start!</button>
+            <p> 
+                Try to answer the following code-related questions within the proper time limit.
+                Keep in mind that incorrect answers will penalize your score/time by 10 seconds!
+            </p>
+            <button id="startbtn" class =" button">Start!</button>
         </header>
 
         <main>
-            <section class="Question">
-                <h2>Question</h2>
+            <section class="hide" id="Questions">
+                    <h3 id="Question-choices"></h3>
+                <div id="choices" class="choices">
                 <ul>
-                    <li><button>Answer #1</button></li>
-                    <li><button>Answer #2</button></li>
-                    <li><button>Answer #3</button></li>
-                    <li><button>Answer #4</button></li>
+                    <li id="choice 1" class="button"></button></li>
+                    <li id="choice 2" class="button"></button></li>
+                    <li id="choice 3" class="button"></button></li>
+                    <li id="choice 4"class="button"></button></li>
                 </ul>
+                </div>
+                <div id="answer"></div>
             </section>
 
-            <section class="Assessment-Done">
-                <h2>Assessment Complete!</h2>
-                <p>Your Score: 00</p>
-                <label for="">Enter Name:</label>
-                <input type="text">
-                <button>Submit</button>
+            <section class="hide" id="Assessment-Done">
+                <div id="scores" >
+                     <h2>Assessment Complete!</h2>
+                <p id="score"></p>
+                <input type="text" name="initials" id="initials" placeholder="Initials..." />
+                <button id="submit" class="button">Submit</button>
+            </div>
             </section>
 
-            <section class="Highscores-Screen">
-                <ol>
-                    <li>Name 00</li>
-                    <li>Name 00</li>
-                    <li>Name 00</li>
-                    <li>Name 00</li>
+            <section class="hide" id="Highscores-Screen">
+                <ol id="scorestore">
                 </ol>
-                <button>Go Back</button>
-                <button>Clear Highscores</button>
+                <button id="back" class="button">Go Back</button>
+                <button id="clear" class="button">Clear Highscores</button>
             </section>
 
         </main>
 
     </div>
 
-  </div>  
+  </div> 
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

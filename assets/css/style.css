@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: darkgray;
 }
 
 p {
@@ -29,20 +29,24 @@ p {
 button {
     outline: none;
     background-color: black;
-    color: goldenrod;
+    color: white;
     font-size: larger;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.button:hover {
+    background-color: pink;
+}
+
 .inner {
 height: 100%;
-background-color: darkgrey;
+background-color: whitesmoke;
 margin: 0 auto;
 }
 
 .Welcome, main {
     margin-bottom: 20vh;
-    background-color: darkgreen;
+    background-color: lightblue;
 }
 
 .Welcome p {
@@ -67,31 +71,39 @@ h2 {
 
 main {
     display: block;
-    background-color: darkgray;
+    background-color: whitesmoke;
     color: black;
 }
 
 
-.Question  h2 {
-    display: block; 
+.Question-choices h3 {
     color: black;
-    list-style-type: none;
     margin-bottom: 10px;
+    list-style-type: none;
 }
 
 .Assessment-Done {
-    display: block;
     margin-left: 10px;
 }
 
-.Hishscores-Screen {
-    display: block;
+#score {
+    color: black;
 }
 
 li {
     text-align: center;
     margin-bottom: 10px;
     margin-top: 10px;
+    list-style-type: none;
+    
 }
 
+.Highscores-Screen button {
+    margin-left: 150px;
+    display: none;
+}
+
+.hide {
+    display: none;
+}
 
