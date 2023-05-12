@@ -25,7 +25,7 @@ p {
     flex-direction: column;
     justify-content: center;
 }
-
+/* button features */
 button {
     outline: none;
     background-color: black;
@@ -33,11 +33,11 @@ button {
     font-size: larger;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+/* all buttons have a hover background color */
 .button:hover {
     background-color: pink;
 }
-
+/* main display */
 .inner {
 height: 100%;
 background-color: whitesmoke;
@@ -52,7 +52,7 @@ margin: 0 auto;
 .Welcome p {
     text-align: center;
 }
-
+/* start button */
 .Welcome button {
     display: block;
     width: 50%;
@@ -64,7 +64,7 @@ h1 {
 color: black;
 margin-bottom: 10px;
 }
-
+/* prompt for test */
 h2 {
     text-align: center;
 }
@@ -75,7 +75,7 @@ main {
     color: black;
 }
 
-
+/* question style */
 .Question-choices h3 {
     color: black;
     margin-bottom: 10px;
@@ -85,11 +85,11 @@ main {
 .Assessment-Done {
     margin-left: 10px;
 }
-
+/* text color for score */
 #score {
     color: black;
 }
-
+/* choices sheet style */
 li {
     text-align: center;
     margin-bottom: 10px;
@@ -103,7 +103,7 @@ li {
     display: none;
 }
 
+/* cant seem to display block which actually showing buttons */
 .hide {
     display: none;
 }
-

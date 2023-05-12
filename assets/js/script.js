@@ -1,3 +1,4 @@
+//majority of variables for js//
 var highscore = document.getElementById("Highscores-Screen");
 var QuestionsEl = document.getElementById("Questions");
 var startBtn = document.getElementById("startbtn");
@@ -51,12 +52,12 @@ var Questions = [
     answer: "4. DOM",
   },
 ];
-
+// start of test //
 function startQuiz() {
   beginEl.setAttribute("class", "hide");
   QuestionsEl.removeAttribute("class");
 }
-
+//display of questions as well as selectable answers//
 function updateQuestion() {
   questionchoice.textContent = Questions[currentQuestion].question;
   questionAnswer1.textContent = Questions[currentQuestion].options[0];
@@ -64,26 +65,40 @@ function updateQuestion() {
   questionAnswer3.textContent = Questions[currentQuestion].options[2];
   questionAnswer4.textContent = Questions[currentQuestion].options[3];
 }
-
+//count down on timer//
 function countDown() {
-    setInterval(function() {
-        timeLeft--
-        timerEl.innerHTML = "Time Left: " + timeLeft
-        if(timeLeft <= 0) {
-            timerEl.innerHTML = "Time Up!";
-            score = score
-            displayScore(score)
-        }
-    },1000)  
+  setInterval(function () {
+    timeLeft--;
+    timerEl.innerHTML = "Time Left: " + timeLeft;
+    if (timeLeft <= 0) {
+      timerEl.innerHTML = "Time Up!";
+      score = score;
+      displayScore(score);
+    }
+  }, 1000);
+}
+//rules of time dock//
+function questionClick() {
+  // check if user guessed wrong
+  if (this.value !== Questions[currentQuestion].answer) {
+    // penalize time
+    time -= 15;
+
+    if (time < 0) {
+      time = 0;
+    }
+  }
 }
 
+//buttons for choices//
 startBtn.addEventListener("click", function (event) {
   startBtn.classList.add("hide");
   QuestionsEl.classList.remove("hide");
   updateQuestion();
-  countDown()
+  countDown();
 });
-
+//choices for questions and time dock, if wrong//
+//added event listener to all choices click//
 questionAnswer1.addEventListener("click", function (event) {
   var clicked = questionAnswer1.innerHTML;
   if (clicked === Questions[currentQuestion].answer) {
@@ -160,27 +175,13 @@ questionAnswer4.addEventListener("click", function (event) {
   }
 });
 
-
-function getQuestion() {
-  var currentQuestion = Questions[currentQuestion];
-  QuestionsEl.textContent = currentQuestion;
-  questionAnswer1.textContent = Questions[currentQuestion].choices[0];
-  questionAnswer2.textContent = Questions[currentQuestion].choices[1];
-  questionAnswer3.textContent = Questions[currentQuestion].choices[2];
-  questionAnswer4.textContent = Questions[currentQuestion].choices[3];
-}
-
-// startBtn.onclick = startTimer
-
-
-
-var submitBtn = document.getElementById("submit");
-
 function displayScore(score) {
   QuestionsEl.classList.add("hide");
   submitscore.classList.remove("hide");
   document.getElementById("score").innerHTML = "Your score: " + score;
 }
+//button for submitting score//
+var submitBtn = document.getElementById("submit");
 
 submitBtn.addEventListener("click", function () {
   var person = initials.value;
@@ -190,14 +191,21 @@ submitBtn.addEventListener("click", function () {
   };
   localStorage.setItem("score", JSON.stringify(whatToSave));
 });
-
+//show high scores-screen//
 function scorestore(s) {
-    submitscore.classList.add("hide");
-    highscore.classList.remove("hide")
-    document.getElementById("scorestore").innerHTML = "View Hishscores: " + scores;
+  submitscore.classList.add("hide");
+  highscore.classList.remove("hide");
+  backBtn;
 }
 
-backBtn.addEventListener("click", function(event){
-    var click = Welcome.innerHTML;
-        if (click === Welcome)
-    Welcome.textContent= "Welcome"});
+var submit = highscore;
+//back button// 
+backBtn.addEventListener("click", function (event) {
+  var click = startQuiz.innerHTML;
+  if (click === Welcome) Welcome.textContent = "Welcome";
+});
+
+function highscore(s) {
+  highscore.classList.remove("hide");
+  document.getElementById("Buttons").innerHTML;
+}

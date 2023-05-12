@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheet link -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Coding Assessment</title>
 </head>
 <body>
 
   <div class="outer">
-
     <div class="top" id="top">
+        <!-- clickable button potentially takes you to highscore screen -->
+        <!-- cant seem to get to function -->
         <button id="Highscores" class="button">View Highscores</button>
+        <!-- timer is float right -->
         <p id="timer">Time Left: 90</p>
     </div>
 
@@ -21,16 +24,21 @@
             <h1>Welcome to the "Coding-Assessment!"</h1>
             <h2> To get started with the Assessment, click start!</h2>
             <p> 
+                <!-- 10 seconds dock if wrong answer is picked -->
                 Try to answer the following code-related questions within the proper time limit.
+                Keep in mind, any wrong answer's will take 10 seconds off total time!
             </p>
+            <!-- start button clickable button to start showing content -->
             <button id="startbtn" class =" button">Start!</button>
         </header>
 
         <main>
+            <!-- hidden to reveal once test starts -->
             <section class="hide" id="Questions">
                     <h3 id="Question-choices"></h3>
                 <div id="choices" class="choices">
                 <ul>
+                    <!-- had to take out text between button><li -->
                     <li id="choice 1" class="button"></button></li>
                     <li id="choice 2" class="button"></button></li>
                     <li id="choice 3" class="button"></button></li>
@@ -39,7 +47,7 @@
                 </div>
                 <div id="answer"></div>
             </section>
-
+            <!-- had to hide text to reveal it after test complete -->
             <section class="hide" id="Assessment-Done">
                 <div id="scores" >
                      <h2>Assessment Complete!</h2>
@@ -50,10 +58,13 @@
             </section>
 
             <section class="hide" id="Highscores-Screen">
-                <ol id="scorestore">
-                </ol>
+                <!-- had to wrap buttons in div -->
+                <div id="scorestore">
+                    <p id="Buttons" class="hide">
+                        <!-- cant seem to make the go back and claer highscore buttons to show -->
                 <button id="back" class="button">Go Back</button>
-                <button id="clear" class="button">Clear Highscores</button>
+                <button id="clear" class="button">Clear Highscores</button></p>
+                </div>
             </section>
 
         </main>
@@ -61,6 +72,7 @@
     </div>
 
   </div> 
+  <!-- script tage at end of page -->
   <script src="assets/js/script.js"></script>
 </body>
 </html>
